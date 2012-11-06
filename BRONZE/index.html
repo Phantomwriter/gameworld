@@ -1,0 +1,660 @@
+
+<!doctype html>  
+<html lang="en">
+<head>
+<!--
+BRONZE VERSION
+Howard Livingston
+MiU-Gameworld App
+Mrs. Alarcon
+10/2012
+
+Locations and Explanations of Design Patterns Implemented here:
+
+1) One-window Drill-Down: "Home Page": This pattern is used in my listview
+   in order to maneuver around my app
+
+2) Thumb-nail and text: "Home Page": For transitioning to other pages,
+   I've incorporated this pattern into my listview so the user knows
+   a little bit more about where this link leads within my application.
+
+3) Thumb-Nail Grid Pattern: "My Page": I felt this pattern wasn't a good 
+   choice for my app. It didn't seem like a good choice given the space restraints.
+
+-->
+
+
+	<meta charset="utf-8">
+	<title>Gameworld App</title>
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+	<link rel="stylesheet" href="css/style.css"/>	
+	<script src="js/libs/modernizr.custom.min.js"></script>
+
+</head>
+<body>
+
+<!--Gameworld Home-->
+<div data-role="page" id="home">
+	<div data-role="header" data-position="fixed">
+		<h1>
+        	Gameworld<br>
+        	Bronze
+      		</h1>
+      	</div>
+      	<div class="ctabox">
+        	<a data-ajax="false">
+          		<img class="indexIcon" src="images/Gamesgalore.png" alt="logo"/>
+        	</a>
+        
+        <div id="indexTitle">
+        	<h3>
+          		Access all you're gaming needs in one place. Sign up today!
+        	</h3>
+        	<div>
+          <p><a data-ajax="false" href="additem.html" data-role="button" data-mini="true" data-theme="b">
+            Sign-up
+          	</a>
+          </p>
+      	</div>
+        </div>
+    </div>
+	<div data-role="content" id="indexBackground">
+		<div id="qoftheday">
+	  		<p class="topCtaTitle">Today's question</p>
+      	 	<p>What year was the first Playstation Introduced?</p>
+	  		  	<p class="btntext">
+	  		  		<a data-ajax="false" href="#dealsPage" data-role="button" data-mini="true" data-theme="b">
+						Click for the answer<br>
+						and today's deals.
+					</a>
+				</p>
+				<p>Click the "about" button in the navbar<br>
+					at the bottom of the page to check<br>
+					out my github account and live bronze<br>
+					version of this app!
+				</p>
+	  	</div>
+      	<p>Browse Categories</p>
+		<div data-role="fieldcontain">
+		<ul data-role="listview" data-filter="true" data-theme="a" style="text-align:center;">
+            <li>
+              <a href="#onlineGames" data-ajax="false">
+                <img src="images/On-LineGames.png" alt="fun" class="indexIcon"/>
+                <h3>
+                  On-line Games
+                </h3>
+                <p>
+                  WOW, Addicting Games.com
+                </p>
+              </a>
+            </li>
+            <li>
+              <a href="#consoleGames" data-ajax="false">
+                <img src="images/ConsoleGames.png" alt="education" class="indexIcon" />
+                <h3>
+                  Console Game info
+                </h3>
+                <p>
+                  Playstation-X-Box-Nintendo
+                </p>
+              </a>
+            </li>
+            <li>
+              <a href="#phoneApps" data-ajax="false">
+                <img src="images/PhoneApps.png" alt="work" class="indexIcon" />
+                <h3>
+                  Phone Apps
+                </h3>
+                <p>
+                  Angry Birds-Words With Friends-Scramble
+                </p>
+              </a>
+            </li>
+            <li>
+              <a href="#cardGames" data-ajax="false">
+                <img src="images/CardGames.png" alt="work" class="indexIcon" />
+                <h3>
+                  Card Games
+                </h3>
+                <p>
+                  Poker-Magic the Gathering-Yu-Gi-Oh
+                </p>
+              </a>
+            </li>
+            <li>
+              <a href="#manualGames" data-ajax="false">
+                <img src="images/ManualGames.png" alt="work" class="indexIcon" />
+                <h3>
+                  Manual Games
+                </h3>
+                <p>
+                  Monopoly, Trivial Pursuit, Backgammon
+                </p>
+              </a>
+            </li>
+          </ul>
+      </div>
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a data-ajax="false" href="#about">About</a></li>
+				<li><a data-ajax="false" href="#home">Home</a></li>
+				<li><a data-ajax="false" href="#myPage">My Page</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+
+
+
+<!--1) Online Game page-->
+
+<div data-role="page" id="onlineGames" data-add-back-btn="true">
+
+	<div data-role="header" data-position="fixed">
+		<h1>Online Games page</h1>
+	</div>
+	<div class="ctabox">
+        <a data-ajax="false">
+          <img class="indexIcon" src="images/On-LineGames.png" alt="logo"/>
+        </a>
+        <h2>
+          On-Line Games
+        </h2>
+    </div>
+    </div>
+	<div data-role="content">
+	<div>
+		<a href="#home" data-ajax="false" data-role="button" class="backToHomeButton" data-mini="true" data-theme="b">Take Me Home</a>
+	</div>
+	<p>Online Games</p> 
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a data-ajax="false" href="#about">About</a></li>
+				<li><a data-ajax="false" href="#home">Home</a></li>
+				<li><a data-ajax="false" href="#myPage">My Page</a></li>
+			</ul>
+		</div>
+	</div>
+
+
+
+
+<!--2) Console Game page-->
+<div data-role="page" id="consoleGames" data-add-back-btn="true">
+
+	<div data-role="header" data-position="fixed">
+		<h1>Console Games</h1>
+	</div>
+	<div class="ctabox">
+        <a data-ajax="false">
+          <img class="indexIcon" src="images/ConsoleGames.png" alt="logo"/>
+        </a>
+        <h2>
+          Console Games
+        </h2>
+      </div>
+	<div data-role="content">
+	<div>
+		<a href="#home" data-ajax="false" data-role="button" class="backToHomeButton" data-mini="true" data-theme="b">Take Me Home</a>
+	</div>
+	<p>Console Games</p> 
+	
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a data-ajax="false" href="#about">About</a></li>
+				<li><a data-ajax="false" href="#home">Home</a></li>
+				<li><a data-ajax="false" href="#myPage">My Page</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+
+
+<!--3) PhoneApp page-->
+
+<div data-role="page" id="phoneApps" data-add-back-btn="true">
+
+	<div data-role="header" data-position="fixed">
+		<h1>Phone Apps</h1>
+	</div>
+	<div class="ctabox">
+        <a data-ajax="false">
+          <img class="indexIcon" src="images/PhoneApps.png" alt="logo"/>
+        </a>
+        <h2>
+         Phone Apps
+        </h2>
+      </div>
+	<div data-role="content">
+	<div>
+		<a href="#home" data-ajax="false" data-role="button" class="backToHomeButton" data-mini="true" data-theme="b">Take Me Home</a>
+	</div>
+	<p>Phone Apps</p> 
+	
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a data-ajax="false" href="#about">About</a></li>
+				<li><a data-ajax="false" href="#home">Home</a></li>
+				<li><a data-ajax="false" href="#myPage">My Page</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+
+
+<!--4) Card Game Page-->
+
+<div data-role="page" id="cardGames" data-add-back-btn="true">
+	<div data-role="header" data-position="fixed">
+		<h1>Card Games</h1>
+	</div>
+	<div class="ctabox">
+        <a data-ajax="false">
+          
+          <img class="indexIcon" src="images/CardGames.png" alt="logo"/>
+        </a>
+        <h2>
+          Card Games
+        </h2>
+      </div>
+	<div data-role="content">
+	<div>
+		<a href="#home" data-ajax="false" data-role="button" class="backToHomeButton" data-mini="true" data-theme="b">Take Me Home</a>
+	</div>
+	<p>Card Games</p> 
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a data-ajax="false" href="#about">About</a></li>
+				<li><a data-ajax="false" href="#home">Home</a></li>
+				<li><a data-ajax="false" href="#myPage">My Page</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+
+<!--5) Manual Game page-->
+
+<div data-role="page" id="manualGames" data-add-back-btn="true">
+	<div data-role="header" data-position="fixed">
+		<h1>Manual Games</h1>
+	</div>
+	<div id="ctabox">
+        <a data-ajax="false">
+          <img id="indexIcon" src="images/ManualGames.png" alt="logo"/>
+        </a>
+        <h2>
+          Manual Games
+        </h2>
+      </div>
+	<div data-role="content">
+	<div>
+		<a href="#home" data-ajax="false" data-role="button" class="backToHomeButton" data-mini="true" data-theme="b">Take Me Home</a>
+	</div>
+	<p>Manual Games</p> 	</div>
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a data-ajax="false" href="#about">About</a></li>
+				<li><a data-ajax="false" href="#home">Home</a></li>
+				<li><a data-ajax="false" href="#myPage">My Page</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+
+<!--6) About Gameworld page-->
+
+<div data-role="page" id="about" data-add-back-btn="true">
+	<div data-role="header" data-position="fixed">
+		<h1>
+        	About Gameworld
+      	</h1>
+      </div>
+	<div data-role="content">
+		<div>
+			<a href="#home" data-ajax="false" data-role="button" class="backToHomeButton" data-mini="true" data-theme="b">Take Me Home</a>
+		</div>
+		<div>
+		<h4>All about Gameworld</h4>
+		<h4>Thank you for trying Gameworld.
+		When you sign up, the world of games is at your finger tips</h4>
+			<div>
+				<h4>Deals and Question of the Week</h4>
+					
+						$tuff your head with knowledge about all things games.
+						There'll be a new question every day and of course links that take you to 
+						places where you can get coupons and deals on all your
+						favorite games.
+					
+			</div>
+			<div>
+				<h4>Console Games</h4>
+					
+						Check out the latest news, information and any
+						deals we can find on your favorite game systems. We'll make sure to keep them up to date
+						because we know times are tough, but that shouldn't stop you
+						from playing your favorite games!
+					
+			</div>
+			<div>
+				<h4>On-line Games</h4>
+					
+						We'll have updated links from websites where you can 
+						play free on-line games for casual play. Places like pogo.com and addictinggames.com.
+						or, pay and play sites like WOW and many more!
+					
+			</div>
+			<div>
+				<h4>Mobile Apps</h4>
+					
+						In this section, we'll have articles and links on the latest popular
+						mobile app releases. Didn't you wish you knew about Angry Birds
+						and Fruit ninja when they first came out?
+					
+			</div>
+			<div>
+				<h4>Card Games</h4>
+					
+						This is the house favorite! Do you play Magic The Gathering,
+						Yu-Gi-Oh or Pokemon? Here's where you can get links to the latest
+						news like new releases, popular cards, deck ideas and deck strategies.
+						We're working on a deck database where you can construct and save 
+						your favorite deck types. For you regular card players, check in for ideas
+						on fun games like Kings in the Corner, Rumy and poker!
+					
+			</div>
+			<div>
+				<h4>Github Links</h4>
+				
+					<a data-ajax="false" data-role="button" id="gitLinksLive" data-theme="b" href="http://Phantomwriter.github.com/miu3/GOLD/index.html">View App Live</a>
+					<a data-ajax="false" data-role="button" id="gitLinksMaster" data-theme="b" href=https://github.com/Phantomwriter/miu3>View Gameworld Code</a>
+					<a data-ajax="false" data-role="button" id="BronzeApp" data-theme="b" href="http://Phantomwriter.github.com/gh-pages/miu3/GOLD/index.html">Gold App</a>
+				
+			</div>
+			<div>
+				<h4>Special Thanks and credits</h4>
+				
+					I want to give credit where credit is due. I don't own any rights to
+					any of the games listed on this app. The intention is to make all
+					the games we like to play more accesible, to provide up-to-date 
+					information about those games and to provide a platform where
+					gameplayers can store information about their favorites. If you're a video game player,
+					a card player, or just a family that loves game night, this is the app for
+					you! Below is a list of companies that have provided great gaming entertainment for all of us.
+			</div><br>	
+			<div class="p3">
+				Sony Entertainment (Playstation)<br>
+				Microsoft(X-Box)<br>
+				Konami(Yu-Gi-Oh)<br>
+				Magic the Gathering (Wizards of the Coast)<br>
+				Sorry, Monopoly and much more(Hasbro)<br>
+				addicting games.com<br>
+				Pogo.com<br>
+				World of Warcraft (Blizzard Entertainment)<br>
+				Pokemon and Nintendo (Nintendo)
+			</div>
+	
+	
+		</div>
+	
+	<div data-role="footer">
+		<div data-role="navbar">
+			<ul>
+				<li><a data-ajax="false" href="#about">About</a></li>
+				<li><a data-ajax="false" href="#home">Home</a></li>
+				<li><a data-ajax="false" href="#myPage">My Page</a></li>
+			</ul>
+		</div>
+
+	</div>
+</div>
+
+</div>
+
+<!--7) My Page-->
+<div data-role="page" id="myPage" data-add-back-btn="true">
+		<div data-role="header" data-position="fixed">
+			<h1>
+        		My Page
+      		</h1>
+    	</div>
+	<div data-role="content">
+		<div data-role="fieldcontain" id="myPageHeader">
+			<h2>Your Favorite Yu-Gi-Oh and Magic the Gathering Game Cards</h2>
+			<div>
+				<h4>Links for more on these games</h4>
+				
+					<a data-ajax="false" data-role="button" id="Yugioh" data-theme="b" href="http://www.yugioh-card.com/">Yu-Gi-Oh</a>
+					<a data-ajax="false" data-role="button" id="Magic" data-theme="b" href="http://www.wizards.com/">Magic The Gathering</a>
+			</div>
+				<div class="ui-grid-a">
+					<div class="ui-block-a">
+						<ul data-role="listview" data-inset="true">
+							<li data-role="list-divider">Yu-Gi-Oh cards"</li>
+								<li>
+									<a data-ajax="false">
+          								<img src="images/Heavy.png" alt="logo"/>
+          									
+          							</a>
+          							<h6>Heavy Storm</h6><br>
+								</li>
+								<li>
+									<a data-ajax="false">
+          								<img src="images/Seal.png" alt="logo"/>
+          									
+          			
+        							</a>
+        							<h6>Seal of Orichalcos</h6><br>
+								</li>
+								<li>
+									<a data-ajax="false">
+          								<img src="images/Mirror.png" alt="logo"/>
+        							</a>
+        							<h6>Mirror Force</h6><br>
+								</li>
+								<li>
+									<a data-ajax="false">
+          								<img src="images/Swords.png" alt="logo"/>
+          									
+        							</a>
+        							<h6>Swords of<br>
+        								Revealing Light</h6><br>
+								</li>
+								<li>
+									<a data-ajax="false">
+          								<img src="images/Pot.png" alt="logo"/>
+          									
+        							</a>
+        							<h6>Pot of Greed</h6><br>
+								</li>
+								<li>
+									<a data-ajax="false">
+          								<img src="images/Caius.png" alt="logo"/>
+          									
+        							</a>
+        							<h6>Caius The<br>
+        								Shadow Monarch</h6>
+								</li>
+								<li>
+									<a data-ajax="false">
+          								<img src="images/Mobius.png" alt="logo"/>
+          									
+        							</a>
+        							<h6>Mobius The<br>
+        								Frost Monarch</h6>
+								</li>
+								<li>
+									<a data-ajax="false">
+          								<img src="images/Zaborg.png" alt="logo"/>
+          									
+        							</a>
+        							<h6>Zaborg The<br>
+        								Thunder Monarch</h6>
+								</li>
+						</ul>
+					</div>	
+					<div class="ui-block-b">
+						<ul data-role="listview" data-inset="true">
+							<li data-role="list-divider">Magic The Gathering"</li>
+								
+								<li>
+									<a data-ajax="false">
+          								<img src="images/Ring.png" alt="logo"/>
+          									
+        							</a>
+        							<h6>Sol Ring</h6><br>
+								</li>
+								
+								<li>
+									<a data-ajax="false">
+          								<img src="images/Plat.png" alt="logo"/>
+          									
+        							</a>
+								<h6>Platinum Angel</h6><br>
+								</li>
+								
+								<li>
+									<a data-ajax="false">
+          								<img src="images/Col.png" alt="logo"/>
+          									
+        							</a>
+								<h6>Darksteel<br>
+									Colossus</h6>
+								</li>
+								
+								<li>
+									<a data-ajax="false">
+          								<img src="images/Trin.png" alt="logo"/>
+          									
+        							</a>
+        							<h6>Trinisphere</h6><br>
+								</li>
+								
+								<li>
+									<a data-ajax="false">
+          								<img src="images/Black.png" alt="logo"/>
+          									
+        							</a>
+        							<h6>Black Lotus</h6><br>
+								</li>
+								
+								<li>
+									<a data-ajax="false">
+          								<img src="images/Rancor.png" alt="logo"/>
+          									
+        							</a>
+        							<h6>Rancor</h6><br>
+								</li>
+								
+								<li>
+									<a data-ajax="false">
+          								<img src="images/Iso.png" alt="logo"/>
+          									
+        							</a>
+        							<h6>Isochron Scepter</h6><br>
+								</li>
+								
+								<li>
+									<a data-ajax="false">
+          								<img src="images/SwordsToPlow.png" alt="logo"/>
+          									
+        							</a>
+        							<h6>Swords To<br>
+        								Plowshares</h6>
+								</li>
+						</ul>
+				</div>
+		</div>
+	</div>
+</div>
+	<div data-role="footer">
+		<div data-role="navbar" data-position="fixed">
+			<ul>
+				<li><a data-ajax="false" href="#about">About</a></li>
+				<li><a data-ajax="false" href="#home">Home</a></li>
+				<li><a data-ajax="false" href="#myPage">My Page</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<!--8) Deals Page-->
+
+<div data-role="page" id="dealsPage">
+	<div data-role="header" data-position="fixed">
+		<h1>
+        	Deal and Answers Page
+      	</h1>
+    </div>
+	<div data-role="content">
+	<div>
+		<a href="#home" data-ajax="false" data-role="button" class="backToHomeButton" data-mini="true" data-theme="b">Take Me Home</a>
+	</div>
+	<div>
+	 	<h1>Question of the Day</h1>
+	 	<h2>What year was the first Playstation introduced?</h2>
+	 	<h2>In 1994, the new PlayStation X (PSX) was released.<br>
+	 		It was no longer compatable with Nintendo game cartridges and only played CD-ROM based games.<br>
+	 		Playstation soon became the best selling game console.</h2>
+	 </div>
+	 <div>
+           <h1>Todays Deal$</h1>
+           <p><a data-ajax="false" href="http://www.savings.com/t-playstation-3-coupons.html" data-role="button" data-mini="true" data-theme="b">
+           
+            Sony Coupons!
+          
+          </a></p>
+          <p><a data-ajax="false" href="http://www.microsoftstore.com/store/msstore/list/parentCategoryID.50606600/categoryID.50789700?ClickID=a9ao5saykls5lz0y05wn0tpywon0wsaywllr" data-role="button" data-mini="true" data-theme="b">
+           
+            X-Box Bundles and Deals!
+          
+          </a></p>
+          <p><a data-ajax="false" href="http://www.retailmenot.com/view/nintendo.com" data-role="button" data-mini="true" data-theme="b">
+           
+            Nintendo Deals Here
+          
+          </a></p>
+      </div>
+	 
+
+	<div data-role="footer">
+		<div data-role="navbar">
+			<ul>
+				<li><a data-ajax="false" href="#about">About</a></li>
+				<li><a data-ajax="false" href="#home">Home</a></li>
+				<li><a data-ajax="false" href="#myPage">My Page</a></li>
+			</ul>
+		</div>
+
+	</div>
+</div>
+</div>
+
+
+
+	
+
+	<!-- JavaScript under here -->
+	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

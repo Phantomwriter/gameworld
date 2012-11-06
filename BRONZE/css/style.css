@@ -1,0 +1,421 @@
+
+
+/*
+
+/*
+BRONZE CSS
+Title: MiU Project 1
+For: Gameworld Mobile App
+Date:10/2012
+Howard Livingston
+Instructor: Ms.Alarcon
+CSS Stylings for index.html and additem.html
+*/
+
+
+
+
+
+
+
+/*//////////////////////////////// INDEX PAGE/////////////////////////////////////*/
+
+/*index page-background image*/
+#indexBackground{
+			background-image:url('http://insurancespringfieldmissouri.com/wp-content/uploads/2011/03/scratched-texture-background.jpg');
+}
+
+
+/*indexpage- Icon position*/
+.indexIcon{
+    		float:left;
+    		display: block;
+    		margin-left: auto;
+   			margin-right: auto;
+    		padding-top:30px;
+}
+
+
+/*index page-It's all about the games*/
+.topCtaTitle{		
+			
+			color:#FFFFFF;
+			font-style:regular;
+			font-family:("Chalkduster",serif, bold);
+}
+
+
+/*index page-icon container*/
+.ctabox{
+			
+			background-image:url('http://insurancespringfieldmissouri.com/wp-content/uploads/2011/03/scratched-texture-background.jpg');	
+			height:250px;
+}
+
+/*index page-Log-in link*/
+#login{
+			padding-left:260px;
+			color:black;
+			font-style:bold;
+			font-family:(Copperplate Gothic Bold);
+			font-weight:40px;
+			font-size:18pt;
+}
+
+
+/*index page-title container*/
+h1{
+			background-color:F6F3D2;
+			width:device-width;
+			text-align:center;
+			padding:10px;
+			border:5px solid orange;
+			border-style: groove;
+			margin:0px;
+			padding-left: 45px;
+			color:a62800;
+			font-style:regular;
+			font-family:Charlemagne Std;
+			font-size:25px;
+			font-weight:bold;
+}
+
+
+/*Index Page-Save your deck*/
+h3{
+			text-align:center;
+			color:#33cccc;
+			font-style:regular;
+			font-family:Copperplate Gothic Bold;
+			font-size:20pt;
+			text-shadow: 0 0 10px #FFFFFF;
+
+}
+
+
+/*Index Page-build your deck*/
+#indexTitle{
+			padding-top:10px;
+			text-align:center;
+			color:#33cccc;
+			font-style:regular;
+			font-family:Copperplate Gothic Bold;
+			font-weight:5px;
+			font-size:18pt;
+			text-shadow: 0 0 10px #FFFFFF;
+}
+
+
+/* Index Page organize and store text*/
+p{         
+
+			
+			color:#ffffff;
+			text-align:center;
+			font-style:regular;
+			font-family:Copperplate Gothic Bold;
+			font-weight:5px;
+			font-size:20pt;
+			text-shadow: 0 0 10px #FFFFFF;
+}
+
+#qoftheday{
+			text-align:center;
+			color:#FFFFFF;
+			font-style:regular;
+			font-family:("Chalkduster",serif, bold);
+
+
+}
+/*indexPage*/
+#getMeStarted{
+
+			padding-left:270px;
+			color:#ffffff;
+			font-style:regular;
+			font-family:Copperplate Gothic Bold;
+			font-weight:5px;
+			font-size:12pt;
+			text-shadow: 0 0 10px #FFFFFF;
+}
+
+/*///////////////////////////Add Item Page/////////////////////////////////////////////////*/
+
+/*add item pic*/
+#icon{
+			padding-right:200px;
+}
+
+
+/*additem page title*/
+#deckConstructorDatabase{
+			text-align:center;
+			color:#100873;
+			font-style:regular;
+			font-family:Copperplate Gothic Bold;
+			font-weight:5px;
+			font-size:28pt;
+			text-shadow: 0 0 10px #FFFFFF;
+}
+
+
+/*additem page-background colors*/
+#contactForm{
+				background-color:#F6F3D2;
+}
+
+
+/*additem page background image*/
+#additemBackground{
+			background-image:url('http://insurancespringfieldmissouri.com/wp-content/uploads/2011/03/scratched-texture-background.jpg');
+}
+
+
+/*additem page-entire bulk nav link-(NAV)Titled sections at the top*/
+#navSection{
+			padding-left:150px;
+}
+
+
+/*additem page-individual clear saved data link*/
+#clear{			
+			
+			
+			color:#FFFFFF;
+			font-style:bold;
+			font-family:(Copperplate Gothic Bold);
+			font-weight:40px;
+			font-size:18pt;
+}
+
+
+/*additem page-display Data*/
+#displayLink{ 
+			
+			color:#FFFFFF;
+			font-style:bold;
+			font-family:(Copperplate Gothic Bold);
+			font-size:18pt;
+			font-weight:80px;
+}
+
+
+/*additem page-home button*/
+#homebutton{
+			
+			color:#FFFFFF;
+			font-style:bold;
+			font-family:(Copperplate Gothic Bold);
+			font-size:18pt;
+			font-weight:40px;
+
+}
+
+
+/*Display Data page-add member*/
+#addNew{
+
+			color:#FFFFFF;
+			font-style:bold;
+			font-family:(Copperplate Gothic Bold);
+			font-weight:1px;
+			font-size:18pt;
+			padding-left:30px;
+
+}
+
+
+/*additem page-enter info*/
+#sectionTitles{
+			color:#ff9e00;
+			font-style:bold;
+			font-family:(Copperplate Gothic Bold);
+			font-weight:1px;
+			font-size:18pt;
+			padding-right:100px;
+}
+
+
+/*additem page-Fields*/
+.fields{
+
+			color:#a60000;
+			font-style:bold;
+			font-family:(Copperplate Gothic Bold);
+			font-weight:1px;
+			font-size:18pt;
+}
+
+
+/*additem page-Fill in the Blank Section*/
+#fillInTheBlanks{
+			color:#a60000;
+			font-style:bold;
+			font-family:(Copperplate Gothic Bold);
+			font-weight:1px;
+			font-size:18pt;
+}
+
+
+/*additem page-Fill in the blanks text*/
+#sectionTitles{	
+			color:#100873;
+			font-style:bold;
+			font-family:(Copperplate Gothic Bold);
+			font-weight:1px;
+			margin-left:10px;
+			
+}
+
+
+/*additem page-Questions*/
+#questions{
+			color:#a60000;
+			font-style:bold;
+			font-family:(Copperplate Gothic Bold);
+			font-weight:1px;
+}
+
+
+/*additem page-Required Fields text*/
+span{
+			color:#a60000;
+			font-style:bold;
+			font-family:(Copperplate Gothic Bold);
+			font-weight:1px;
+			margin-left:18px;
+}
+
+/*additem page-Total Form-Field Color*/
+form{
+			
+			width: 375px;
+			bottom center;
+			border:2px solid,#ff4900 ;
+			padding-left:15px;
+			padding-right:40px;
+				
+}
+
+/*///////////////////////////All Button Text Color/////////////////////////////////////////////////*/
+
+.ui-btn-text{
+
+			color:white;
+			
+}
+
+h4{
+			text-align:center;
+			font-size:16pt;
+			color:#1240ab;
+			font-style:bold;
+			font-family:(Copperplate Gothic Bold);
+			font-weight:1px;
+			
+
+}
+
+#p3{
+			font-size:12pt;
+			color:#920031;
+			font-style:bold;
+			font-family:(Copperplate Gothic Bold);
+			font-weight:1px;
+}
+
+.p3{
+			text-align:center;
+			font-size:12pt;
+			color:#920031;
+			font-style:bold;
+			font-family:(Copperplate Gothic Bold);
+			font-weight:1px;
+}
+
+p4{
+			
+			font-size:14pt;
+			color:#1240ab;
+			font-style:bold;
+			font-family:(Copperplate Gothic Bold);
+			font-weight:1px;
+
+}
+
+#thanks{
+			font-size:10pt;
+			color:#1240ab;
+			font-style:bold;
+			font-family:(Copperplate Gothic Bold);
+			font-weight:1px;
+
+
+
+
+}
+/*/////////////////////////// End All Button Text Color/////////////////////////////////////////////////*/
+
+/*///////////////////////////My Page /////////////////////////////////////////////////*/
+
+#myPageHeader{
+			
+			padding-top:50px;
+}
+
+.myPageFavorites{
+			text-align:center;
+			color:#920031;
+			font-style:regular;
+			font-family:Copperplate Gothic Bold;
+			font-size:12pt;
+			text-shadow: 0 0 10px #FFFFFF;
+}
+
+.p10{
+			text-align:center;
+			font-size:14pt;
+			color:#1240ab;
+			font-style:bold;
+			font-family:(Copperplate Gothic Bold);
+			font-weight:1px;
+
+}
+
+
+
+/*///////////////////////////My Page/////////////////////////////////////////////////*/
+
+#myPage .ui-grid-b div{
+
+			text-align:center;
+}
+
+#myPage .ui-grid-b .ui-bar{
+			padding:10px 10px;
+
+}
+
+h6{
+			color:#920031;
+			
+}
+
+/*//////////////////////////////////JSON DATA//////////////////////////////////*/
+#items{
+			
+			color:white;
+			font-size: 24px;
+			text-shadow: 0 0 20px #FFFFFF;
+}
+
+
+#editContact{
+			color:#ffffff;
+}
+
+
+
+
+
+

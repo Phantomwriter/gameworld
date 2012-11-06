@@ -1,0 +1,239 @@
+<!DOCTYPE HTML>
+<!--
+Add Item Page
+Week 1 MiU ssignment
+Howie Livingston
+Ms.Alarcon
+10/2012 
+Gameworld  App 
+-->
+<html>
+  <head>
+	
+    <meta charset ="UTF-8"/>
+    <meta name="keywords" content="Wolflinx multi-stoarge and linking app"/>
+    <meta name ="description" content="Store and organize everthing you do on-line in one place"/>
+    <meta name= "robots" content="index, follow"/>
+    <meta name= "viewport" content= "user-scalable=yes, width= device-width"/>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <link href="css/style.css" rel="stylesheet"/>
+    <link media="only screen and (max-device-width: 480px) and (min-device-width: 320px)" href="mobile.css" type="text/css" rel="stylesheet" />
+    <link media="handheld, only screen and (max-device-width: 319px)" href="mobile_simple.css" type="text/css" rel="stylesheet" />
+  </head>
+  <!--Sign-up Page-->
+  <div data-role="page" id="#signup" back-button="true">
+	<body id="additemBackground">
+      <a>
+        <img id="icon" src="images/cardfamily.png" style="padding-left:80px"/>
+      </a>
+      <header id="deckConstructorDatabase" style="background-color:#F6F3D2;border:5px solid orange;border-style: groove;text-align:center; height:100px; width:420px;">
+        Game Player Database
+      </header>
+
+
+
+<!--Sign-up Page nav Links-->      
+      <nav id="navSection">
+        <a href="index.html" id="homebutton">
+          Home
+        </a>
+        <br>
+        <a href="#" id="clear">
+          Clear Data
+        </a>
+        <br>
+        <a href="#" id="displayLink">
+          Display Data
+        </a>
+        <br>
+        <a href="additem.html" id ="addNew" style="display:none;">
+          Add New Item
+        </a>
+      </nav>
+
+
+
+<!--Sign-up Form-->
+      <form action="#" method="post" id="contactForm">
+        <fieldset id="contactFieldset">
+          
+          <legend id ="sectionTitles">
+            Enter your info.
+          </legend>
+          <span>
+            * fields are required. 
+          </span>
+          <ul id="errors">
+          </ul>
+          <ul id="EnterYourInfo">
+            
+            <li id="select">
+              <label class="fields "for="groups">
+                Gaming Interest:
+              </label>
+              <br />
+            </li>
+            <li>
+              <label class ="fields" for="fname">
+                *First Name: 
+              </label>
+              <input type="text" id="fname" />
+            </li>
+            <li>
+              <label class ="fields" for="lname">
+                *Last Name: 
+              </label>
+              <input type="text" id="lname" />
+            </li>
+            <li>
+              <label class ="fields" for="pword">
+                *Password: 
+              </label>
+              <input type="password" id="pword" />
+            </li>
+            <li>
+              <label class ="fields" for="cpword">
+                *Confirm Password: 
+              </label>
+              <input type="password" id="cpword"/>
+            </li>
+            <li>
+              <label class ="fields" for="email">
+                *Email: 
+              </label>
+              <input type="email" id="email" placeholder="validateEmail" />
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset id="fillInTheBlanks">
+          <legend id = "sectionTitles">
+            Fill-in-the-blanks
+          </legend>
+          <ul id ="FITB?">
+            
+            <li1>
+              How do you like to play your games?
+            </li1>
+            <li>
+              <input type="checkbox" value= "PhoneApps" id="selectValue"/>
+              <label for="PhoneApps">
+                Phone Apps
+              </label>
+            </li>
+            <li>
+              <input type="checkbox" value="PCGames" id="selectValue"/>
+              <label for="PCGames">
+                PC Games
+              </label>
+            </li>
+            <li>
+              <input type="checkbox" value="ManualGames" id="selectValue"/>
+              <label for="ManualGames">
+                Manual Games
+              </label>
+            </li>
+            
+          </ul>
+          <ul id="device?">
+            <li>
+              What type of device are you using?
+            </li>
+            <li>
+              <input type="radio" id="deviceValue" value="CellPhone" name="deviceValue"/>
+              <label for="CellPhone">
+                Cell Phone
+              </label>
+            </li>
+            <li>
+              <input type="radio" id="devicevalue" value="Tablet"  name="deviceValue"/>
+              <label for="Tablet">
+                Tablet
+              </label>
+            </li>
+          </ul>
+          <ul id ="FriendsAndDateJoined">
+            <li>
+              <label for="quantity">
+                I have 
+                <input type="number" name="quantity" id="friends">
+                Friends I'd like to 
+                <cite>
+                  connect with!
+                </cite>
+              </label>
+            </li>
+            <li>
+              <label for="date">
+                Date Joined
+              </label>
+              <input type="text" id="date"/>
+            </li>
+          </ul>
+          
+          <label for="comments">
+            Write a catch phrase for your domain here:
+          </label>
+          <textarea id ="comments">
+          </textarea>
+          
+          <input  id="editContact" type="hidden" value="true" style="color:white;" />
+          <ul id="thankYou">
+            Thanks for signing up!
+          </ul>
+        </fieldset>
+        <input type="button" value="Save Information" id="submit" />
+        <br />
+      </form>
+      
+      <div id="results">
+      </div>
+
+
+
+<!--Scripts--> 
+      <script id="JSON" src= "mainjs/json.js" type="text/javascript">
+      </script>
+      <script src= "mainjs/main.js" type="text/javascript">
+      </script>
+      <script src="js/libs/modernizr.custom.min.js">
+      </script>
+      
+    </body>
+  </div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
