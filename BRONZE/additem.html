@@ -5,11 +5,11 @@ Week 1 MiU ssignment
 Howie Livingston
 Ms.Alarcon
 10/2012 
-Gameworld  App 
+Gameworld Mobile App 
 -->
 <html>
   <head>
-	
+	<title>Mobile App</title>
     <meta charset ="UTF-8"/>
     <meta name="keywords" content="Wolflinx multi-stoarge and linking app"/>
     <meta name ="description" content="Store and organize everthing you do on-line in one place"/>
@@ -22,7 +22,7 @@ Gameworld  App
     <link media="handheld, only screen and (max-device-width: 319px)" href="mobile_simple.css" type="text/css" rel="stylesheet" />
   </head>
   <!--Sign-up Page-->
-  <div data-role="page" id="#signup" back-button="true">
+  <div data-role="page" id="signup">
 	<body id="additemBackground">
       <a>
         <img id="icon" src="images/cardfamily.png" style="padding-left:80px"/>
@@ -78,31 +78,31 @@ Gameworld  App
               <label class ="fields" for="fname">
                 *First Name: 
               </label>
-              <input type="text" id="fname" />
+              <input type="text" id="fname" placeholder="Bobby"/>
             </li>
             <li>
               <label class ="fields" for="lname">
                 *Last Name: 
               </label>
-              <input type="text" id="lname" />
+              <input type="text" id="lname" placeholder="Bobbington"/>
             </li>
             <li>
               <label class ="fields" for="pword">
-                *Password: 
+                Password: 
               </label>
-              <input type="password" id="pword" />
+              <input type="password" id="pword" placeholder="Rumplestitskin"/>
             </li>
             <li>
               <label class ="fields" for="cpword">
-                *Confirm Password: 
+                Confirm Password: 
               </label>
-              <input type="password" id="cpword"/>
+              <input type="password" id="cpword" placeholder="Rumplestitskin"/>
             </li>
             <li>
               <label class ="fields" for="email">
                 *Email: 
               </label>
-              <input type="email" id="email" placeholder="validateEmail" />
+              <input type="email" id="email" placeholder="me@me.com" />
             </li>
           </ul>
         </fieldset>
@@ -116,7 +116,7 @@ Gameworld  App
               How do you like to play your games?
             </li1>
             <li>
-              <input type="checkbox" value= "PhoneApps" id="selectValue"/>
+              <input type="checkbox" value= "PhoneApps" id="selectValue" checked="checked"/>
               <label for="PhoneApps">
                 Phone Apps
               </label>
@@ -140,7 +140,7 @@ Gameworld  App
               What type of device are you using?
             </li>
             <li>
-              <input type="radio" id="deviceValue" value="CellPhone" name="deviceValue"/>
+              <input type="radio" id="deviceValue" value="CellPhone" name="deviceValue" checked="checked"/>
               <label for="CellPhone">
                 Cell Phone
               </label>
@@ -167,7 +167,7 @@ Gameworld  App
               <label for="date">
                 Date Joined
               </label>
-              <input type="text" id="date"/>
+              <input type="text" id="date" placeholder="May, 2012"/>
             </li>
           </ul>
           
@@ -177,13 +177,14 @@ Gameworld  App
           <textarea id ="comments">
           </textarea>
           
-          <input  id="editContact" type="hidden" value="true" style="color:white;" />
+          <input  id="editContact" type="hidden" value="true" style="color:white;"/>
           <ul id="thankYou">
             Thanks for signing up!
           </ul>
         </fieldset>
-        <input type="button" value="Save Information" id="submit" />
-        <br />
+        <div id="submitButton">
+        	<input type="button" value="Save Information" id="submit" style="color:blue; " />
+        </div>
       </form>
       
       <div id="results">
