@@ -2,12 +2,66 @@
 <!doctype html>  
 <html lang="en">
 <head>
+<meta charset="utf-8">
+	<title>Gameworld App</title>
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--<meta http-equiv="cleartype" content="on">-->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+	<link rel="stylesheet" href="css/style.css"/>	
+	<script src="js/libs/modernizr.custom.min.js"></script>
 <!--
 GOLD VERSION APP
 Howard Livingston
 MiU-Gameworld App
 Mrs. Alarcon
 10/2012
+
+//////////////////////////////////Week 4////////////////////////////////////////////////
+
+I decided to implement 2 of the 3 required patterns in my 
+GOLD app as well as a good example of streamline branding. 
+
+I only used the failed streamline branding example
+for my BRONZE app
+
+
+
+1) Improved streamline branding by:
+		
+		Changing the icon to one that blends better with the current format
+	
+		Changing the Font to an old school gaming font that players
+		of all ages will recognize
+		
+		Used Adobe Illustrator to combine my icon and text into a singular graphic.
+		
+		Applying the same branding image to every page of my app and made it "clickable",
+		leading back to the home page
+		
+2) Implemented the "Few Hues-Many Values" style by:
+
+		Striped my color variations from  10 to about 5
+		
+		Focusing certain color values for actions such as yellow now represents the  "take me home button".
+		It had a few different uses in the last version of this app but now, the user always
+		knows that yellow means home
+		
+		Eliminated Black and gray from my app (except for the header and footer). I focused
+		on coloring my buttons all one color, with consistant color schemes (blue and white)
+		thoughout for a better UI.
+		
+3) Made Background adjustment by:
+
+
+		In the previous version of this app, I only used my background for my home page. 
+		I tried applying the background to all of my app pages and I noticed a greaer sense 
+		of depth on the page. The page elements seem to float above the background image, due to its
+		great use of shading and blue hues.
+
+//////////////////////////////////Week 4////////////////////////////////////////////////
+
 
 //////////////////////////////////Week 3////////////////////////////////////////////////
 
@@ -24,10 +78,10 @@ Mrs. Alarcon
 
 5) Form validates, but presently does not save to local storage :( 
 
-
-
+//////////////////////////////////Week 3////////////////////////////////////////////////
 
 //////////////////////////////////Week 2////////////////////////////////////////////////
+
 Locations and Explanations of Design Patterns Implemented here:
 
 1) One-window Drill-Down: "Home Page": This pattern is used in my listview
@@ -40,6 +94,8 @@ Locations and Explanations of Design Patterns Implemented here:
 3) "Collapsible" or List-inlay: "My Page" button in the footer navbar
    leads to the users personal poreferences page where favorite links
    can be stored.
+
+//////////////////////////////////Week 2////////////////////////////////////////////////
 
 Page Order
 1) Gameworld Home Page
@@ -54,17 +110,6 @@ Page Order
 10)News Stream Page
 -->
 
-
-	<meta charset="utf-8">
-	<title>Gameworld App</title>
-	<meta name="HandheldFriendly" content="True">
-	<meta name="MobileOptimized" content="320"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!--<meta http-equiv="cleartype" content="on">-->
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
-	<link rel="stylesheet" href="css/style.css"/>	
-	<script src="js/libs/modernizr.custom.min.js"></script>
-
 </head>
 <body>
 
@@ -72,100 +117,90 @@ Page Order
 <div data-role="page" id="home">
 	<div data-role="header" data-position="fixed">
 		<h1>
-        	Gameworld:Gold Version
-      		</h1>
+        	Gold
+      	</h1>
     </div>
-      	<div class="ctabox">
+    	<div data-role="fieldcontain" class="ctabox">
+        	
         	<a data-ajax="false">
           		<img class="indexIcon" src="images/Gamesgalore.png" alt="logo"/>
-        	</a>
-        
-        <div id="indexTitle">
-        	<h3>
-          		Access all you're gaming needs in one place. Sign up today!
-        	</h3>
-        	<div>
-          		<p><a data-ajax="false" href="#signUpPage" data-role="button" data-mini="true" data-theme="b">
+        	<h3>Customizable Game Library</h3>
+        	
+        	</a>  
+        </div>
+        <div data-role="content" class="indexBackground">
+        	<div id="qoftheday">
+	  		 	<p>
+	  		  		<a data-ajax="false" href="#signUpPage" data-role="button" data-theme="b">
             				Sign-up
           			</a>
-          		</p>
-          		<div id="qoftheday">
-	  		  	<p class="btntext">
 	  		  		<a data-ajax="false" href="#dealsPage" data-role="button" data-mini="true" data-theme="b">
-						Click for the today's question and deals.
+						Deals and daily question.
 					</a>
+					<a data-ajax="false" href="#news" data-role="button" data-mini="true" data-theme="b">
+           			 	News Stream
+          			</a>
 				</p>
-	  	</div>
-	  	<div>
-	  	<div>
-          <p><a data-ajax="false" href="#news" data-role="button" data-mini="true" data-theme="b">
-            News Stream
-          	</a>
-          </p>
-      	</div>	
-	  	</div>
-      		</div>
-        </div>
-    </div>
-	<div data-role="content" id="indexBackground">
-			<p>Browse Categories</p>
-		<div data-role="fieldcontain">
-		<ul data-role="listview" data-filter="true" data-theme="a" style="text-align:center;">
-            <li>
-              <a href="#onlineGames" data-ajax="false">
-                <img src="images/On-LineGames.png" alt="fun" class="indexIcon"/>
-                <h3>
-                  On-line Games
-                </h3>
-                <p>
-                  WOW, Addicting Games.com
-                </p>
-              </a>
-            </li>
-            <li>
-              <a href="#consoleGames" data-ajax="false">
-                <img src="images/ConsoleGames.png" alt="education" class="indexIcon" />
-                <h3>
-                  Console Game info
-                </h3>
-                <p>
-                  Playstation-X-Box-Nintendo
-                </p>
-              </a>
-            </li>
-            <li>
-              <a href="#phoneApps" data-ajax="false">
-                <img src="images/PhoneApps.png" alt="work" class="indexIcon" />
-                <h3>
-                  Phone Apps
-                </h3>
-                <p>
-                  Angry Birds-Words With Friends-Scramble
-                </p>
-              </a>
-            </li>
-            <li>
-              <a href="#cardGames" data-ajax="false">
-                <img src="images/CardGames.png" alt="work" class="indexIcon" />
-                <h3>
-                  Card Games
-                </h3>
-                <p>
-                  Poker-Magic the Gathering-Yu-Gi-Oh
-                </p>
-              </a>
-            </li>
-            <li>
-              <a href="#manualGames" data-ajax="false">
-                <img src="images/ManualGames.png" alt="work" class="indexIcon" />
-                <h3>
-                  Manual Games
-                </h3>
-                <p>
-                  Monopoly, Trivial Pursuit, Backgammon
-                </p>
-              </a>
-            </li>
+	  		</div>
+	  			<h3>Browse</h3>
+    	
+    	<div data-role="fieldcontain">
+			<ul data-role="listview" data-filter="true" data-theme="b" style="text-align:center;">
+            	<li>
+              		<a href="#onlineGames" data-ajax="false">
+                		<img src="images/On-LineGames.png" alt="fun" class="indexIcon"/>
+                		<h3>
+                  			On-line Games
+                		</h3>
+                		<p>
+                  			WOW, Addicting Games.com
+                		</p>
+              		</a>
+            	</li>
+            	<li>
+              		<a href="#consoleGames" data-ajax="false">
+                		<img src="images/ConsoleGames.png" alt="education" class="indexIcon" />
+                		<h3>
+                  			Console Games
+                		</h3>
+                		<p>
+                  			Playstation-X-Box-Nintendo
+                		</p>
+              		</a>
+            	</li>
+            	<li>
+              		<a href="#phoneApps" data-ajax="false">
+                		<img src="images/PhoneApps.png" alt="work" class="indexIcon" />
+                		<h3>
+                  			Phone Apps
+                		</h3>
+                		<p>
+                  			Angry Birds-Words With Friends-Scramble
+                		</p>
+              		</a>
+            	</li>
+            	<li>
+              		<a href="#cardGames" data-ajax="false">
+                		<img src="images/CardGames.png" alt="work" class="indexIcon" />
+                		<h3>
+                  			Card Games
+                		</h3>
+                		<p>
+                  			Poker-Magic the Gathering-Yu-Gi-Oh
+                		</p>
+              		</a>
+            		</li>
+        		<li>	
+              		<a href="#manualGames" data-ajax="false">
+                		<img src="images/ManualGames.png" alt="work" class="indexIcon" />
+                		<h3>
+                  			Manual Games
+                		</h3>
+                		<p>
+                  			Monopoly, Trivial Pursuit, Backgammon
+                		</p>
+              		</a>
+            	</li>
           </ul>
       </div>
 	</div>
@@ -180,27 +215,84 @@ Page Order
 	</div>
 </div>
 
-
 <!--2) Online Game Page-->
 
 <div data-role="page" id="onlineGames" data-add-back-btn="true">
 
 	<div data-role="header" data-position="fixed">
-		<h1>Online Games page</h1>
-	</div>
-		<div class="ctabox">
-       		<a data-ajax="false">
-          		<img class="indexIcon" src="images/On-LineGames.png" alt="logo"/>
+		<h1>
+        	Gold
+      	</h1>
+    </div>
+    	
+    	<div data-role="fieldcontain" class="ctabox">
+        	
+        	<a data-ajax="false"  href="#home">
+          		<img class="indexIcon" src="images/Gamesgalore.png" alt="logo"/>
         	</a>
-        		<h3>
-          			On-Line Games
-        		</h3>
-      	</div>
-	<div data-role="content">
-	    <p style="color:black">On-line Games</p>
+        <div>
+        	
+        	<div id="On-LineGames" class="indexBackground">
+        		<h3>On-line Games</h3>
+        	<a data-ajax="false">
+          		<img  src="images/On-LineGames.png" alt="On-LineGames"/>
+        	</a>
+        	
+        	</div>
+    </div>
+	<div data-role="content" class="indexBackground">
+	
 	<div>
 		<a href="#home" data-ajax="false" data-role="button" class="backToHomeButton" data-mini="true" data-theme="e">Take Me Home</a>
 	</div>
+	<div data-role="fieldcontain">
+			<ul data-role="listview" data-filter="true" data-theme="b" style="text-align:center;">
+            	<li>
+              		<a href="#errorPage" data-ajax="false">
+                		<img src="images/AG.png" alt="fun" class="indexIcon"/>
+                		<h3>
+                  			AddictingGames.com
+                		</h3>
+                		<p>
+                  			Flight, Fireboy and Watergirl
+                		</p>
+              		</a>
+            	</li>
+            	<li>
+              		<a href="#errorPage" data-ajax="false">
+                		<img src="images/wowIcon.png" alt="education" class="indexIcon" />
+                		<h3>
+                  			World of Warcraft
+                		</h3>
+                		<p>
+                  			RPG 
+                		</p>
+              		</a>
+            	</li>
+            	<li>
+              		<a href="#errorPage" data-ajax="false">
+                		<img src="images/retro.png" alt="work" class="indexIcon" />
+                		<h3>
+                  			RetroGamer.com
+                		</h3>
+                		<p>
+                  			Pac-man, Asteroids
+                		</p>
+              		</a>
+            	</li>
+            	<li>
+              		<a href="#errorPage" data-ajax="false">
+                		<img src="images/pojoIcon.png" alt="work" class="indexIcon" />
+                		<h3>
+                  			POJO.com
+                		</h3>
+                		<p>
+                  			Zuma, Tetris
+                		</p>
+              		</a>
+            	</li>
+          </ul>
+      </div>
 	<div data-role="footer" data-position="fixed">
 		<div data-role="navbar">
 			<ul>
@@ -212,27 +304,84 @@ Page Order
 	</div>
 </div>
 </div>
+</div>
 
 
 <!--3) Console Game Page-->
 
 <div data-role="page" id="consoleGames" data-add-back-btn="true">
 	<div data-role="header" data-position="fixed">
-		<h1>Console Games</h1>
-	</div>
-	<div class="ctabox">
-       		<a data-ajax="false">
-          		<img class="indexIcon" src="images/consoleGames.png" alt="logo"/>
+		<h1>
+        	Gold
+      	</h1>
+    </div>
+    	
+    	<div data-role="fieldcontain" class="ctabox">
+        	
+        	<a data-ajax="false" href="#home">
+          		<img class="indexIcon" src="images/Gamesgalore.png" alt="logo"/>
         	</a>
-        		<h3>
-          			Console Games
-        		</h3>
-      	</div>
-	<div data-role="content">
+    	<div>
+        	<div class="indexBackground">
+        		<h3>Console Games</h3>
+        	<a data-ajax="false">
+          		<img  src="images/ConsoleGames.png" alt="consoleGames"/>
+        	</a>
+        	
+        	</div>
+    </div>
+	<div data-role="content" class="indexBackground">
 		<div>
 			<a href="#home" data-ajax="false" data-role="button" class="backToHomeButton" data-mini="true" data-theme="e">Take Me Home</a>
 		</div>
-			<p style="color:black">Console Games</p>
+		<div data-role="fieldcontain">
+			<ul data-role="listview" data-filter="true" data-theme="b" style="text-align:center;">
+            	<li>
+              		<a href="#errorPage" data-ajax="false">
+                		<img src="images/consoleGames.png" alt="fun" class="indexIcon"/>
+                		<h3>
+                  			Sony Playstation
+                		</h3>
+                		<p>
+                  			PS 1, 2, 3 and PSP
+                		</p>
+              		</a>
+            	</li>
+            	<li>
+              		<a href="#errorPage" data-ajax="false">
+                		<img src="images/consoleGames.png" alt="education" class="indexIcon" />
+                		<h3>
+                  			X-BOX 360
+                		</h3>
+                		<p>
+                  			Call of Duty, Special Ops 
+                		</p>
+              		</a>
+            	</li>
+            	<li>
+              		<a href="#errorPage" data-ajax="false">
+                		<img src="images/consoleGames.png" alt="work" class="indexIcon" />
+                		<h3>
+                  			Nintendo Wii
+                		</h3>
+                		<p>
+                  			Mario-Cart
+                		</p>
+              		</a>
+            	</li>
+            	<li>
+              		<a href="#errorPage" data-ajax="false">
+                		<img src="images/consoleGames.png" alt="work" class="indexIcon" />
+                		<h3>
+                  			Sega
+                		</h3>
+                		<p>
+                  			Pitfall, Sonic
+                		</p>
+              		</a>
+            	</li>
+          </ul>
+      </div>
 
 	<div data-role="footer" data-position="fixed">
 		<div data-role="navbar">
@@ -245,28 +394,83 @@ Page Order
 	</div>
   </div>
 </div>
-  
+ </div> 
   
 <!--4) PhoneApp Page-->
 
 <div data-role="page" id="phoneApps" data-add-back-btn="true">
 	<div data-role="header" data-position="fixed">
-		<h1>Phone Apps</h1>
-	</div>
-		<div class="ctabox">
-       		<a data-ajax="false">
-          		<img class="indexIcon" src="images/PhoneApps.png" alt="logo"/>
+		<h1>
+        	Gold
+      	</h1>
+    </div>
+    	
+    	<div data-role="fieldcontain" class="ctabox">
+        	
+        	<a data-ajax="false" href="#home">
+          		<img class="indexIcon" src="images/Gamesgalore.png" alt="logo"/>
         	</a>
-        		<h3>
-          			Phone Apps
-        		</h3>
-      	</div>
-	<div data-role="content">
+        <div>
+        <div id="PhoneApps" class="indexBackground">
+        		<h3>Phone Apps</h3>
+        	<a data-ajax="false">
+          		<img  src="images/PhoneApps.png" alt="PhoneApps"/>
+        	</a>
+        	
+        	</div>
+    </div>
+	<div data-role="content" class="indexBackground">
 	<div>
 		<a href="#home" data-ajax="false" data-role="button" class="backToHomeButton" data-mini="true" data-theme="e">Take Me Home</a>
 	</div>
-		<p style="color:black">Phone Apps</p>
-
+		<div data-role="fieldcontain">
+			<ul data-role="listview" data-filter="true" data-theme="b" style="text-align:center;">
+            	<li>
+              		<a href="#errorPage" data-ajax="false">
+                		<img src="images/PhoneApps.png" alt="fun" class="indexIcon"/>
+                		<h3>
+                  			Angry Birds
+                		</h3>
+                		<p>
+                  			Birds vs. Pigs!
+                		</p>
+              		</a>
+            	</li>
+            	<li>
+              		<a href="#errorPage" data-ajax="false">
+                		<img src="images/PhoneApps.png" alt="education" class="indexIcon" />
+                		<h3>
+                  			Fruit Ninja!
+                		</h3>
+                		<p>
+                  			Slice and Dice!
+                		</p>
+              		</a>
+            	</li>
+            	<li>
+              		<a href="#errorPage" data-ajax="false">
+                		<img src="images/PhoneApps.png" alt="work" class="indexIcon" />
+                		<h3>
+                  			Words With Friends
+                		</h3>
+                		<p>
+                  			Tripple letter time!
+                		</p>
+              		</a>
+            	</li>
+            	<li>
+              		<a href="#errorPage" data-ajax="false">
+                		<img src="images/PhoneApps.png" alt="work" class="indexIcon" />
+                		<h3>
+                  			Scramble
+                		</h3>
+                		<p>
+                  			Time test word speller
+                		</p>
+              		</a>
+            	</li>
+          </ul>
+      </div>
 	</div>
 	<div data-role="footer" data-position="fixed">
 		<div data-role="navbar">
@@ -277,6 +481,7 @@ Page Order
 			</ul>
 		</div>
 	</div>
+</div>
 </div>
 
 
@@ -284,23 +489,168 @@ Page Order
 
 <div data-role="page" id="cardGames" data-add-back-btn="true">
 	<div data-role="header" data-position="fixed">
-		<h1>Card Games</h1>
-	</div>
-	<div class="ctabox">
-       		<a data-ajax="false">
-          		<img class="indexIcon" src="images/CardGames.png" alt="logo"/>
+		<h1>
+        	Gold
+      	</h1>
+    </div>
+    	
+    	<div data-role="fieldcontain" class="ctabox">
+        	
+        	<a data-ajax="false" href="#home">
+          		<img class="indexIcon" src="images/Gamesgalore.png" alt="logo"/>
         	</a>
-        		<h3>
-          			Card Games
-        		</h3>
-      	</div>
-	<div data-role="content">
+        		<div>
+        		<div id="CardGames" class="indexBackground">
+        		<h3>Card Games</h3>
+        	<a data-ajax="false">
+          		<img  src="images/CardGames.png" alt="On-LineGames"/>
+        	</a>
+        	
+        	</div>
+    </div>
+	<div data-role="content" class="indexBackground">
 	<div>
 		<a href="#home" data-ajax="false" data-role="button" class="backToHomeButton" data-mini="true" data-theme="e">Take Me Home</a>
 	</div>
-		<p style="color:black">Card Games</p>
-
+		<div data-role="fieldcontain">
+			<ul data-role="listview" data-filter="true" data-theme="b">
+            	<li>
+              		<a href="#errorPage" data-ajax="false">
+                		<img src="images/CardGames.png" alt="fun" class="indexIcon"/>
+                		<h3>
+                  			Poker
+                		</h3>
+                		<p>
+                  			Texas Hold'em
+                		</p>
+              		</a>
+            	</li>
+            	<li>
+              		<a href="#errorPage" data-ajax="false">
+                		<img src="images/CardGames.png" alt="education" class="indexIcon" />
+                		<h3>
+                  			Rumy
+                		</h3>
+                		<p>
+                  			Basic and 500
+                		</p>
+              		</a>
+            	</li>
+            	<li>
+              		<a href="#errorPage" data-ajax="false">
+                		<img src="images/CardGames.png" alt="work" class="indexIcon" />
+                		<h3>
+                  			Magic The Gathering
+                		</h3>
+                		<p>
+                  			Black Lotus and Artifacts
+                		</p>
+              		</a>
+            	</li>
+            	<li>
+              		<a href="#errorPage" data-ajax="false">
+                		<img src="images/CardGames.png" alt="work" class="indexIcon" />
+                		<h3>
+                  			Yu-Gi-Oh
+                		</h3>
+                		<p>
+                  			Pot of Duality & Solemn Warning
+                		</p>
+              		</a>
+            	</li>
+          </ul>
+      </div>
 	</div>
+</div>
+</div>
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a data-ajax="false" href="#about">About</a></li>
+				<li><a data-ajax="false" href="#home">Home</a></li>
+				<li><a data-ajax="false" href="#myPage">My Page</a></li>
+			</ul>
+		</div>
+	</div>
+
+
+
+<!--6) Manual Game Page-->
+
+<div data-role="page" id="manualGames" data-add-back-btn="true">
+	<div data-role="header" data-position="fixed">
+		<h1>
+        	Gold
+      	</h1>
+    </div>
+    	
+    	<div data-role="fieldcontain" class="ctabox">
+        	
+        	<a data-ajax="false" href="#home">
+          		<img class="indexIcon" src="images/Gamesgalore.png" alt="logo"/>
+        	</a>
+        </div>
+        	<div>
+        		<div id="ManualGames" class="indexBackground">
+        		<h3>Manual Games</h3>
+        	<a data-ajax="false">
+          		<img  src="images/ManualGames.png" alt="On-LineGames"/>
+        	</a>
+        	
+        	</div>
+    </div>
+	<div data-role="content" class="indexBackground">
+	<div>
+		<a href="#home" data-ajax="false" data-role="button" class="backToHomeButton" data-mini="true" data-theme="e">Take Me Home</a>
+	</div>
+	    <div data-role="fieldcontain">
+			<ul data-role="listview" data-filter="true" data-theme="b">
+            	<li>
+              		<a href="#errorPage" data-ajax="false">
+                		<img src="images/ManualGames.png" alt="fun" class="indexIcon"/>
+                		<h3>
+                  			Board
+                		</h3>
+                		<p>
+                  			Backgammon, Monopoly
+                		</p>
+              		</a>
+            	</li>
+            	<li>
+              		<a href="#errorPage" data-ajax="false">
+                		<img src="images/ManualGames.png" alt="education" class="indexIcon" />
+                		<h3>
+                  			Outside
+                		</h3>
+                		<p>
+                  			Volleyball, Horseshoes
+                		</p>
+              		</a>
+            	</li>
+            	<li>
+              		<a href="#errorPage" data-ajax="false">
+                		<img src="images/ManualGames.png" alt="work" class="indexIcon" />
+                		<h3>
+                  			Chess
+                		</h3>
+                		<p>
+                  			3-d, hints
+                		</p>
+              		</a>
+            	</li>
+            	<li>
+              		<a href="#errorPage" data-ajax="false">
+                		<img src="images/ManualGames.png" alt="work" class="indexIcon" />
+                		<h3>
+                  			Minute-to-win it
+                		</h3>
+                		<p>
+                  			At Home Challenges
+                		</p>
+              		</a>
+            	</li>
+          </ul>
+      </div>
 	<div data-role="footer" data-position="fixed">
 		<div data-role="navbar">
 			<ul>
@@ -311,37 +661,6 @@ Page Order
 		</div>
 	</div>
 </div>
-
-
-<!--6) Manual Game Page-->
-
-<div data-role="page" id="manualGames" data-add-back-btn="true">
-	<div data-role="header" data-position="fixed">
-		<h1>Manual Games</h1>
-	</div>
-	<div class="ctabox">
-       		<a data-ajax="false">
-          		<img class="indexIcon" src="images/ManualGames.png" alt="logo"/>
-        	</a>
-        		<h3>
-          			Manual Games
-        		</h3>
-      	</div>
-	<div data-role="content">
-	<div>
-		<a href="#home" data-ajax="false" data-role="button" class="backToHomeButton" data-mini="true" data-theme="e">Take Me Home</a>
-	</div>
-	    <p style="color:black">Manual games</p>
-	</div>
-	<div data-role="footer" data-position="fixed">
-		<div data-role="navbar">
-			<ul>
-				<li><a data-ajax="false" href="#about">About</a></li>
-				<li><a data-ajax="false" href="#home">Home</a></li>
-				<li><a data-ajax="false" href="#myPage">My Page</a></li>
-			</ul>
-		</div>
-	</div>
 </div>
 
 
@@ -350,8 +669,15 @@ Page Order
 <div data-role="page" id="about" data-add-back-btn="true">
 	<div data-role="header" data-position="fixed">
 		<h1>
-        	About Gameworld
+        	Gold
       	</h1>
+    </div>
+    	
+    	<div data-role="fieldcontain" class="ctabox">
+        	
+        	<a data-ajax="false" href="#home">
+          		<img class="indexIcon" src="images/Gamesgalore.png" alt="logo"/>
+        	</a>
       </div>
 	<div data-role="content">
 		<div>
@@ -378,9 +704,9 @@ Page Order
 			
 			<div>
 				<h4>Github Links</h4>
-					<a data-ajax="false" data-role="button" id="gitLinksLive" data-theme="b" href="http://Phantomwriter.github.com/gameworld/GOLD/index.html">View App Live</a>
+					<a data-ajax="false" data-role="button" id="gitLinksLive" data-theme="b" href="http://Phantomwriter.github.com/gameworld/BRONZE/index.html">View App Live</a>
 					<a data-ajax="false" data-role="button" id="gitLinksMaster" data-theme="b" href="https://github.com/Phantomwriter/gameworld">View Gameworld Code</a>
-					<a data-ajax="false" data-role="button" id="GoldApp" data-theme="b" href="http://Phantomwriter.github.com/miu3/BRONZE/index.html">Bronze</a>
+					<a data-ajax="false" data-role="button" id="GoldApp" data-theme="b" href="http://phantomwriter.github.com/gameworld/BRONZE/index.html">BRONZE</a>
 			</div>
 			<div>
 				<h4>Special Thanks and credits</h4>
@@ -399,7 +725,7 @@ Page Order
 				Pokemon and Nintendo (Nintendo)
 			</div>
 	</div>
-	<div data-role="footer">
+	<div data-role="footer" data-position="fixed">
 		<div data-role="navbar">
 			<ul>
 				<li><a data-ajax="false" href="#about">About</a></li>
@@ -411,7 +737,6 @@ Page Order
 </div>
 </div>
 
-
 <!--8) My Page-->
 
 <div data-role="page" id="myPage" data-add-back-btn="true">
@@ -420,61 +745,77 @@ Page Order
         		My Page
       		</h1>
     	</div>
-	<div data-role="content">
+    	<div data-role="fieldcontain" class="ctabox">
+        	
+        	<a data-ajax="false" href="#home">
+          		<img class="indexIcon" src="images/Gamesgalore.png" alt="logo"/>
+        	</a>
+        </div>
+	<div data-role="content" class="indexBackground">
 		<div>
 			<a href="#home" data-ajax="false" data-role="button" class="backToHomeButton" data-mini="true" data-theme="e">Take Me Home</a>
 		</div>
 		<div data-role="fieldcontain" id="myPageHeader">
 		<div>
-			<h1>My Favorite Games</h1>
+			<h3>My Favorite Games</h3>
 		</div>
 		<div data-role="collapsible" data-collapsed="true" data-theme="b" style="text-align:center" class="myPageFavorites">
 			<h2>Sony Playstation</h2>
 					<p><a data-ajax="false" data-role="button" data-mini="true" href="http://us.playstation.com/" data-theme="b">Playstation Games Official Site</a></p>
-				Sony Playstation-God of War<br>
-				Sony Playstation-Crash Bandicoot<br>
-				Sony Playstation-Tomb Raider<br>
-				Sony Playstation-Spyro<br>
+				<h3>
+					Sony-God of War<br>
+					Sony-Crash Bandicoot<br>
+					Sony-Tomb Raider<br>
+					Sony-Spyro<br>
+				</h3>
 		</div>
 		<div data-role="collapsible" data-collapsed="true" data-theme="b" style="text-align:center" class="myPageFavorites">
 			<h2>X-Box</h2>
 					<p><a data-ajax="false" data-role="button" data-mini="true" href="http://www.xbox.com/en-US/" data-theme="b">X-Box Games Official Site</a></p>
-				X-Box-Siphon Filter<br>
-				X-Box-Halo<br>
-				X-Box-Assasins-Creed<br>
-				X-Box-Call of Duty<br>
+				<h3>
+					X-Box-Siphon Filter<br>
+					X-Box-Halo<br>
+					X-Box-Assasins-Creed<br>
+					X-Box-Call of Duty<br>
+				</h3>
 		</div>
 		<div data-role="collapsible" data-collapsed="true" data-theme="b" style="text-align:center" class="myPageFavorites">
 			<h2>Card Games</h2>
 					<p><a data-ajax="false" data-role="button" data-mini="true" href="http://www.pojo.com/" data-theme="b">Card Games at Pojo.com</a></p>
-				Yu-Gi-Oh<br>
-				Magic The Gathering<br>
-				Kings in the Corner<br>
-				Rumy
+				<h3>
+					Yu-Gi-Oh<br>
+					Magic The Gathering<br>
+					Kings in the Corner<br>
+					Rumy
+				</h3>
 		</div>
 		<div data-role="collapsible" data-collapsed="true" data-theme="b" style="text-align:center" class="myPageFavorites">
 			<h2>Manual/Board Games</h2>
 					<p><a data-ajax="false" data-role="button" data-mini="true" href="http://www.hasbro.com/games/en_us/" data-theme="b">Hasbro Games Official Site</a></p>
-				Yahtzee<br>
-				Sorry<br>
-				Battleship<br>
-				Monopoly<br>
+				<h3>
+					Yahtzee<br>
+					Sorry<br>
+					Battleship<br>
+					Monopoly<br>
+				</h3>
 		</div>
 		<div data-role="collapsible" data-collapsed="true" data-theme="b" style="text-align:center" class="myPageFavorites">
 			<h2>Apps</h2>
 					<p><a data-ajax="false" data-role="button" data-mini="true" href="https://itunes.apple.com/us/genre/ios/id36?mt=8" data-theme="b">Apple App Store-Official Site</a></p>
-				Words With Friends<br>
-				Angry Birds<br>
-				Fruit Ninja<br>
-				Candy Crush Saga<br>
+				<h3>
+					Words With Friends<br>
+					Angry Birds<br>
+					Fruit Ninja<br>
+					Candy Crush Saga<br>
+				</h3>
 		</div>
 		<div data-role="collapsible" data-collapsed="true" data-theme="b" style="text-align:center" class="myPageFavorites">
 			<h2>On-Line Games</h2>
-				Flight--on Addicting Games.com<br>
+				<h3>Flight--on Addicting Games.com</h3><br>
 					<p><a data-ajax="false" data-role="button" data-mini="true" href="http://www.addictinggames.com/" data-theme="b">Addicting Games.com-Official Site</a></p>
-				World of Warcraft<br>
+				<h3>World of Warcraft</h3><br>
 					<p><a data-ajax="false" data-role="button" data-mini="true" href="http://us.battle.net/wow/en/" data-theme="b">World of Warcraft-Official Site</a></p>
-				80's Favorites on Retrogamer.com<br>
+				<h3>80's Favorites on Retrogamer.com</h3><br>
 					<p><a data-ajax="false" data-role="button" data-mini="true" href="http://www.retrogamer.com/home" data-theme="b">Retrogamer.com-Official Site</a></p>
 		</div>
 	</div>
@@ -496,16 +837,22 @@ Page Order
 <div data-role="page" id="dealsPage">
 	<div data-role="header" data-position="fixed">
 		<h1>
-        	Deal and Answers Page
+        	Deals
       	</h1>
     </div>
-	<div data-role="content">
+    <div data-role="fieldcontain" class="ctabox">
+        	
+        	<a data-ajax="false" href="#home">
+          		<img class="indexIcon" src="images/Gamesgalore.png" alt="logo"/>
+        	</a>
+        </div>
+	<div data-role="content" class="indexBackground">
 	<div>
 		<a href="#home" data-ajax="false" data-role="button" class="backToHomeButton" data-mini="true" data-theme="e">Take Me Home</a>
 	</div>
 	<div>
 	 	<h1>Question of the Day</h1>
-	 	<h2>What year was the first Playstation introduced?</h2>
+	 	<h3>What year was the first Playstation introduced?</h3>
 	 	<h2>In 1994, the new PlayStation X (PSX) was released.<br>
 	 		It was no longer compatable with Nintendo game cartridges and only played CD-ROM based games.<br>
 	 		Playstation soon became the best selling game console.</h2>
@@ -554,7 +901,7 @@ Page Order
           			News
         		</h3>
       	</div>
-	<div data-role="content">
+	<div data-role="content" class="indexBackground">
 	<div>
 		<a href="#home" data-ajax="false" data-role="button" class="backToHomeButton" data-mini="true" data-theme="e">Take Me Home</a>
 	</div>
@@ -602,21 +949,16 @@ Page Order
 		<h1>Sign-up Page</h1>
 	</div>
 		<div class="ctabox">
-       		<a data-ajax="false">
+        	<a data-ajax="false" href="#home">
           		<img class="indexIcon" src="images/Gamesgalore.png" alt="logo"/>
         	</a>
-        		<h3>
-          			Sign-up Now
-        		</h3>
-        		<p>Your gaming world in one place!</p>
       	</div>
 	<div data-role="content">
 			<label for="formsearch"></label>
    			<input type="search" name="formsearch" id="formsearch" />
 		<div data-role="fieldcontain">
    				<a href="#home" data-ajax="false" data-role="button" class="backToHomeButton" data-theme="e">Take Me Home</a>
-   				<a data-ajax="false" data-role="button" id="clear" data-theme="b" href="#">Clear Current Member info.</a>
-				<a data-ajax="false" data-role="button" id="displayLink" data-theme="b" href="#">Show All Members</a>
+   				
 				<a data-ajax="false" data-role="button" id="addNew" data-theme="b" class="ui-hidden-accessible" style="display:none" href="additem.html">Add New Memeber</a>
 			</div>
          	
@@ -624,37 +966,40 @@ Page Order
 <!--Actual Sign-up Form-->
    
    <form action="#" method="post" id="signUpForm">
-			<div id="enterInfoText"> 
-				<p style="color:#1a1eb2">Enter your info to Sign-up</p>					
+			<div class="signUpText"> 
+				Enter your info to Sign-up					
 			
 				<ul 
 					id="errors">
 				</ul>
 			</div>
 				<div data-role="fieldcontain">		
-						<label for="fname" style="color:#1a1eb2; font-size:16pt">First Name</label>
+						<label for="fname" class="signUpText">First Name</label>
 						<input type="text" name="fname" id="fname" placeholder="Type First Name to clear field" class="required" style="color:#black"/>
 				</div>
 				<div data-role="fieldcontain">		
-						<label for="lname" style="color:#1a1eb2; font-size:16pt">Last Name</label>
+						<label for="lname" class="signUpText">Last Name</label>
 						<input type="text" name="lname" id="lname" placeholder="Type Last Name to clear field" class="required" style="color:#black"/>
 				</div>
 				<div data-role="fieldcontain">
-						<label for="pword" style="color:#1a1eb2; font-size:16pt">Password</label>
+						<label for="pword" class="signUpText">Password</label>
 						<input type="text" name="pword" id="pword" placeholder="Type Password to clear field" class="required" style="color:#black"/>
 				</div>
 				<div data-role="fieldcontain">
-						<label for="cpword" style="color:#1a1eb2; font-size:16pt">Redo Password</label>
+						<label for="cpword" class="signUpText">Redo Password</label>
 						<input type="text" name="cpword" id="cpword" placeholder="Re-type password to clear field" class="required" style="color:#black"/>
 				</div>
 				<div data-role="fieldcontain">
-						<label for="email" style="color:#1a1eb2; font-size:16pt">E-mail</label>
+						<label for="email" class="signUpText">E-mail</label>
 						<input type="text" name="email" id="email" placeholder="Type e-mail to clear field--example: me@ me.com" class="required" style="color:#black"/>
 				</div>
-			<div data-role="fieldcontain" style="text-align:center">		
-				<p style="color:#1a1eb2">What are you mostly interested in?</p>
+			<div data-role="fieldcontain" class="signUpText">		
 		    	<fieldset data-role="controlgroup">
-		    		<legend>Favorites?</legend>
+		    		<legend></legend>
+		    		<div class="signUpText">
+		    		Favorites?
+		    		
+		    		</div>
 		    			<input type="checkbox" name="check" value="onlineGamesCbox" id="onlineGamesCbox" class="required" data-theme="b" checked="checked"/>
 		    			<label for="onlineGamesCbox">On-Line Games</label>
 		    		
@@ -673,10 +1018,13 @@ Page Order
 		    	</fieldset>
 		    </div>
 		    		
-		    <div data-role="fieldcontain" style="text-align:center">
-					<p style="color:#1a1eb2">What type of device are you using?</p>
+		    <div data-role="fieldcontain" class="signUpText">
 				<fieldset data-role="controlgroup">
-						<legend>Device?</legend>
+				<legend ></legend>
+				<div class="signUpText">
+				Device?
+				</div>
+						
 						<input type="radio" name="radio-choice" id="radio-choice-1" value="choice-1" checked="checked" data-theme="b"/>
      					<label for="radio-choice-1">Cell?</label>
 
@@ -686,15 +1034,17 @@ Page Order
 			</div>
 				
 				<div data-role="fieldcontain" style="text-align:center">
-					<p style="color:#1a1eb2">Are you a developer?</p>
+					<div class="signUpText">
+					Are you a developer?
+					</div>
 					<label for="friends"></label>
 		    			<select data-role="slider" name="friends" id="friends" data-theme="b"  style="text-align:center">	
 		    				<option value="off">No</option>
 		    				<option value="on">Yes</option>
 						</select>
 				</div>
-				<div data-role="fieldcontain" style="text-align:center">
-					<p style="color:#1a1eb2">Choose a group that best describes you</p>
+				<div data-role="fieldcontain" class="signUpText">
+					Choose a group that best describes you
 						<select name="groups" id="groups" data-theme="b">
    							<option data-placeholder="true">Select a group you belong in</option>
    							<option value="business">Business</option>
@@ -704,8 +1054,10 @@ Page Order
 							<option value="techy">Techy</option>
 						</select>
 		    	</div>	
-		    <div data-role="fieldcontain" style="text-align:center">
-		    	<p style="color:#1a1eb2">Date Of Birth:</p>
+		    <div data-role="fieldcontain" class="signUpText">
+		    	<div class="signUpText">
+		    	Date Of Birth:
+		    	</div>
 				<select name="date" id="month" data-theme="b" data-native-menu="false">
 					<option value="na">Select a Month</option>
 					<option value="1">January</option>
@@ -722,7 +1074,7 @@ Page Order
 					<option value="12">December</option>
 				</select>
 			</div>
-			<div data-role="fieldcontain"  style="text-align:center">
+			<div data-role="fieldcontain"  class="signUpText">
 				<select name="date" id="day" data-theme="b" data-native-menu="false">
 					<option value="na">Select a Day</option>
 					<option value="1">1</option>
@@ -758,7 +1110,7 @@ Page Order
 					<option value="31">31</option>
 				</select>
 			</div>
-			<div data-role="fieldcontain"  style="text-align:center">
+			<div data-role="fieldcontain"  class="signUpText">
 				<select name="date" id="year" data-theme="b" data-native-menu="false">
 					<option value="na">Select a Year</option>
 					<option value="2012">2012</option>
@@ -816,12 +1168,16 @@ Page Order
 					<option value="1960">1960</option>
 				</select>
 			</div>
-				<div>
-		    		<p style="color:#1a1eb2">Phrase to remember you by</p>
+		    	<div class="signUpText">
+		    		Phrase to remember you by
+		    	</div>
+		    	<div data-role="fieldcontain" class="signUpText">
 		    		<label for="comments"></label>
-		    				<textarea id ="comments" placeholder="I'm the King of Games!"  style="text-align:center"></textarea>	
-		    			<input  id="editContact" type="hidden" value="true" />
-						<p style="color:#1a1eb2">Thanks for signing up!<p>
+		    			<textarea id="comments" placeholder="I'm the King of Games!"></textarea>
+		    	</div>	
+		    		<input  id="editContact" type="hidden" value="true" />
+				<div id="thankYouPhrase">	
+					<p style="color:#1a1eb2">Thanks for signing up!<p>
 				</div>
 			<div data-role="fieldcontain" style="text-align:center">
 					<input type="reset" value="Cancel" id="cancel" data-theme="a" data-inline="true"/>
@@ -831,6 +1187,10 @@ Page Order
 			<a href="#signUpPageErrors" id="signUpErrorsLink" data-rel="dialog" data-transition="pop">Open errors</a>
 		
 		</form>
+		</div>
+		<div data-role="fieldcontain">
+				<a data-ajax="false" data-role="button" id="clear" data-theme="b" href="#">Clear Current Member info</a>
+				<a data-ajax="false" data-role="button" id="displayLink" data-theme="b" href="#">Show All Members</a>
 		</div>
 				
 	<div data-role="footer" data-position="fixed">
@@ -869,7 +1229,31 @@ Page Order
 		</div>
 	</div>
 
+<!--404 page-->
+<div data-role="page" id="errorPage" data-add-back-btn="true">
+	<div data-role="header">
+		"ERROR 404"
+	</div>
+	<div data-role="content" id="content">
+			<p>Sorry, this page is under construction.Come back later</p>
+	</div>
+	<div>
+			   				<a href="#home" data-ajax="false" data-role="button" class="backToHomeButton" data-theme="e">Take Me Home</a>
+
+	
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a data-ajax="false" href="#about">About</a></li>
+				<li><a data-ajax="false" href="#home">Home</a></li>
+				<li><a data-ajax="false" href="#myPage">My Page</a></li>
+			</ul>
+		</div>
+	</div>
 </div>
+
+
 <!-- JavaScript under here -->
 	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
