@@ -9,6 +9,25 @@ MiU-Gameworld App
 Mrs. Alarcon
 10/2012
 
+//////////////////////////////////Week 4////////////////////////////////////////////////
+
+I implemented the poor example of streamline branding for this app
+
+1) I used the same logo image...which was distorted, blurry and didn't seem 
+   engaging enough as it was
+   
+2) I left the font alone as well. I feel the dark blue text doesn't contrast
+   against the darker colored background
+   
+3) If you click the home page links such as "console games" and "on-line games" etc
+   you'll see (at the top) that the branding image and the image that's supposed to represent 
+   the page you're on are clumped together at the top of the screen.
+   This same pattern is used in the gold app but in a much better way.
+   
+4) Most of the pages don't even have the branding image.
+
+//////////////////////////////////Week 4////////////////////////////////////////////////
+
 //////////////////////////////////Week 3////////////////////////////////////////////////
 
 1) More than 2 input prompts and hints incorported...primaries are checkboxes and radio
@@ -25,8 +44,6 @@ Mrs. Alarcon
 5) Form validates and saves to local storage. JSON data can be populated 
    and then viewed, edited or deleted.
 
-
-
 //////////////////////////////////Week 2////////////////////////////////////////////////
 
 Locations and Explanations of Design Patterns Implemented here:
@@ -40,6 +57,9 @@ Locations and Explanations of Design Patterns Implemented here:
 
 3) Thumb-Nail Grid Pattern: "My Page": I felt this pattern wasn't a good 
    choice for my app. It didn't seem like a good choice given the space restraints.
+   
+//////////////////////////////////Week 2////////////////////////////////////////////////
+
 
 		Page Order
 1) Gameworld Home Page
@@ -175,26 +195,84 @@ Locations and Explanations of Design Patterns Implemented here:
 </div>
 
 
-<!--2) Online Game page-->
+<!--2) Online Game Page-->
 
 <div data-role="page" id="onlineGames" data-add-back-btn="true">
 
 	<div data-role="header" data-position="fixed">
-		<h1>Online Games page</h1>
-	</div>
-		<div class="ctabox">
-       		<a data-ajax="false">
-          		<img class="indexIcon" src="images/On-LineGames.png" alt="logo"/>
+		<h1>
+        	Bronze
+      	</h1>
+    </div>
+    	
+    	<div data-role="fieldcontain" class="ctabox">
+        	
+        	<a data-ajax="false">
+          		<img class="indexIcon" src="images/Gamesgalore.png" alt="logo"/>
         	</a>
-        		<h3>
-          			On-Line Games
-        		</h3>
-      	</div>
-	<div data-role="content">
-	    <p style="color:black">On-line Games</p>
+        <div>
+        	
+        	<div id="On-LineGames" class="indexBackground">
+        		<h3>On-line Games</h3>
+        	<a data-ajax="false">
+          		<img  src="images/On-LineGames.png" alt="On-LineGames"/>
+        	</a>
+        	
+        	</div>
+    </div>
+	<div data-role="content" class="indexBackground">
+	
 	<div>
 		<a href="#home" data-ajax="false" data-role="button" class="backToHomeButton" data-mini="true" data-theme="e">Take Me Home</a>
 	</div>
+	<div data-role="fieldcontain">
+			<ul data-role="listview" data-filter="true" data-theme="b" style="text-align:center;">
+            	<li>
+              		<a href="#errorPage" data-ajax="false">
+                		<img src="images/AG.png" alt="fun" class="indexIcon"/>
+                		<h3>
+                  			AddictingGames.com
+                		</h3>
+                		<p>
+                  			Flight, Fireboy and Watergirl
+                		</p>
+              		</a>
+            	</li>
+            	<li>
+              		<a href="#errorPage" data-ajax="false">
+                		<img src="images/wowIcon.png" alt="education" class="indexIcon" />
+                		<h3>
+                  			World of Warcraft
+                		</h3>
+                		<p>
+                  			RPG 
+                		</p>
+              		</a>
+            	</li>
+            	<li>
+              		<a href="#errorPage" data-ajax="false">
+                		<img src="images/retro.png" alt="work" class="indexIcon" />
+                		<h3>
+                  			RetroGamer.com
+                		</h3>
+                		<p>
+                  			Pac-man, Asteroids
+                		</p>
+              		</a>
+            	</li>
+            	<li>
+              		<a href="#errorPage" data-ajax="false">
+                		<img src="images/pojoIcon.png" alt="work" class="indexIcon" />
+                		<h3>
+                  			POJO.com
+                		</h3>
+                		<p>
+                  			Zuma, Tetris
+                		</p>
+              		</a>
+            	</li>
+          </ul>
+      </div>
 	<div data-role="footer" data-position="fixed">
 		<div data-role="navbar">
 			<ul>
@@ -206,27 +284,84 @@ Locations and Explanations of Design Patterns Implemented here:
 	</div>
 </div>
 </div>
-
+</div>
 
 
 <!--3) Console Game Page-->
+
 <div data-role="page" id="consoleGames" data-add-back-btn="true">
 	<div data-role="header" data-position="fixed">
-		<h1>Console Games</h1>
-	</div>
-	<div class="ctabox">
-       		<a data-ajax="false">
-          		<img class="indexIcon" src="images/consoleGames.png" alt="logo"/>
+		<h1>
+        	Bronze
+      	</h1>
+    </div>
+    	
+    	<div data-role="fieldcontain" class="ctabox">
+        	
+        	<a data-ajax="false">
+          		<img class="indexIcon" src="images/Gamesgalore.png" alt="logo"/>
         	</a>
-        		<h3>
-          			Console Games
-        		</h3>
-      	</div>
-	<div data-role="content">
+    	<div>
+        	<div id="consoleGames" class="indexBackground">
+        		<h3>Console Games</h3>
+        	<a data-ajax="false">
+          		<img  src="images/ConsoleGames.png" alt="consoleGames"/>
+        	</a>
+        	
+        	</div>
+    </div>
+	<div data-role="content" class="indexBackground">
 		<div>
 			<a href="#home" data-ajax="false" data-role="button" class="backToHomeButton" data-mini="true" data-theme="e">Take Me Home</a>
 		</div>
-			<p style="color:black">Console Games</p>
+		<div data-role="fieldcontain">
+			<ul data-role="listview" data-filter="true" data-theme="b" style="text-align:center;">
+            	<li>
+              		<a href="#errorPage" data-ajax="false">
+                		<img src="images/consoleGames.png" alt="fun" class="indexIcon"/>
+                		<h3>
+                  			Sony Playstation
+                		</h3>
+                		<p>
+                  			PS 1, 2, 3 and PSP
+                		</p>
+              		</a>
+            	</li>
+            	<li>
+              		<a href="#errorPage" data-ajax="false">
+                		<img src="images/consoleGames.png" alt="education" class="indexIcon" />
+                		<h3>
+                  			X-BOX 360
+                		</h3>
+                		<p>
+                  			Call of Duty, Special Ops 
+                		</p>
+              		</a>
+            	</li>
+            	<li>
+              		<a href="#errorPage" data-ajax="false">
+                		<img src="images/consoleGames.png" alt="work" class="indexIcon" />
+                		<h3>
+                  			Nintendo Wii
+                		</h3>
+                		<p>
+                  			Mario-Cart
+                		</p>
+              		</a>
+            	</li>
+            	<li>
+              		<a href="#errorPage" data-ajax="false">
+                		<img src="images/consoleGames.png" alt="work" class="indexIcon" />
+                		<h3>
+                  			Sega
+                		</h3>
+                		<p>
+                  			Pitfall, Sonic
+                		</p>
+              		</a>
+            	</li>
+          </ul>
+      </div>
 
 	<div data-role="footer" data-position="fixed">
 		<div data-role="navbar">
@@ -238,29 +373,84 @@ Locations and Explanations of Design Patterns Implemented here:
 		</div>
 	</div>
   </div>
-   </div>
-  
+</div>
+ </div> 
   
 <!--4) PhoneApp Page-->
 
 <div data-role="page" id="phoneApps" data-add-back-btn="true">
 	<div data-role="header" data-position="fixed">
-		<h1>Phone Apps</h1>
-	</div>
-	<div class="ctabox">
-       		<a data-ajax="false">
-          		<img class="indexIcon" src="images/PhoneApps.png" alt="logo"/>
+		<h1>
+        	Bronze
+      	</h1>
+    </div>
+    	
+    	<div data-role="fieldcontain" class="ctabox">
+        	
+        	<a data-ajax="false">
+          		<img class="indexIcon" src="images/Gamesgalore.png" alt="logo"/>
         	</a>
-        		<h3>
-          			Phone Apps
-        		</h3>
-      	</div>
-	<div data-role="content">
+        <div>
+        <div id="PhoneApps" class="indexBackground">
+        		<h3>Phone Apps</h3>
+        	<a data-ajax="false">
+          		<img  src="images/PhoneApps.png" alt="PhoneApps"/>
+        	</a>
+        	
+        	</div>
+    </div>
+	<div data-role="content" class="indexBackground">
 	<div>
 		<a href="#home" data-ajax="false" data-role="button" class="backToHomeButton" data-mini="true" data-theme="e">Take Me Home</a>
 	</div>
-		<p style="color:black">Phone Apps</p>
-
+		<div data-role="fieldcontain">
+			<ul data-role="listview" data-filter="true" data-theme="b" style="text-align:center;">
+            	<li>
+              		<a href="#errorPage" data-ajax="false">
+                		<img src="images/PhoneApps.png" alt="fun" class="indexIcon"/>
+                		<h3>
+                  			Angry Birds
+                		</h3>
+                		<p>
+                  			Birds vs. Pigs!
+                		</p>
+              		</a>
+            	</li>
+            	<li>
+              		<a href="#errorPage" data-ajax="false">
+                		<img src="images/PhoneApps.png" alt="education" class="indexIcon" />
+                		<h3>
+                  			Fruit Ninja!
+                		</h3>
+                		<p>
+                  			Slice and Dice!
+                		</p>
+              		</a>
+            	</li>
+            	<li>
+              		<a href="#errorPage" data-ajax="false">
+                		<img src="images/PhoneApps.png" alt="work" class="indexIcon" />
+                		<h3>
+                  			Words With Friends
+                		</h3>
+                		<p>
+                  			Tripple letter time!
+                		</p>
+              		</a>
+            	</li>
+            	<li>
+              		<a href="#errorPage" data-ajax="false">
+                		<img src="images/PhoneApps.png" alt="work" class="indexIcon" />
+                		<h3>
+                  			Scramble
+                		</h3>
+                		<p>
+                  			Time test word speller
+                		</p>
+              		</a>
+            	</li>
+          </ul>
+      </div>
 	</div>
 	<div data-role="footer" data-position="fixed">
 		<div data-role="navbar">
@@ -272,30 +462,87 @@ Locations and Explanations of Design Patterns Implemented here:
 		</div>
 	</div>
 </div>
-
-
+</div>
+</div>
 
 <!--5) Card Game Page-->
 
 <div data-role="page" id="cardGames" data-add-back-btn="true">
 	<div data-role="header" data-position="fixed">
-		<h1>Card Games</h1>
-	</div>
-	<div class="ctabox">
-       		<a data-ajax="false">
-          		<img class="indexIcon" src="images/CardGames.png" alt="logo"/>
+		<h1>
+        	Bronze
+      	</h1>
+    </div>
+    	
+    	<div data-role="fieldcontain" class="ctabox">
+        	
+        	<a data-ajax="false">
+          		<img class="indexIcon" src="images/Gamesgalore.png" alt="logo"/>
         	</a>
-        		<h3>
-          			Card Games
-        		</h3>
-      	</div>
-	<div data-role="content">
+        		<div>
+        		<div id="CardGames" class="indexBackground">
+        		<h3>Card Games</h3>
+        	<a data-ajax="false">
+          		<img  src="images/CardGames.png" alt="On-LineGames"/>
+        	</a>
+        	
+        	</div>
+    </div>
+	<div data-role="content" class="indexBackground">
 	<div>
 		<a href="#home" data-ajax="false" data-role="button" class="backToHomeButton" data-mini="true" data-theme="e">Take Me Home</a>
 	</div>
-		<p style="color:black">Card Games</p>
-
+		<div data-role="fieldcontain">
+			<ul data-role="listview" data-filter="true" data-theme="b">
+            	<li>
+              		<a href="#errorPage" data-ajax="false">
+                		<img src="images/CardGames.png" alt="fun" class="indexIcon"/>
+                		<h3>
+                  			Poker
+                		</h3>
+                		<p>
+                  			Texas Hold'em
+                		</p>
+              		</a>
+            	</li>
+            	<li>
+              		<a href="#errorPage" data-ajax="false">
+                		<img src="images/CardGames.png" alt="education" class="indexIcon" />
+                		<h3>
+                  			Rumy
+                		</h3>
+                		<p>
+                  			Basic and 500
+                		</p>
+              		</a>
+            	</li>
+            	<li>
+              		<a href="#errorPage" data-ajax="false">
+                		<img src="images/CardGames.png" alt="work" class="indexIcon" />
+                		<h3>
+                  			Magic The Gathering
+                		</h3>
+                		<p>
+                  			Black Lotus and Artifacts
+                		</p>
+              		</a>
+            	</li>
+            	<li>
+              		<a href="#errorPage" data-ajax="false">
+                		<img src="images/CardGames.png" alt="work" class="indexIcon" />
+                		<h3>
+                  			Yu-Gi-Oh
+                		</h3>
+                		<p>
+                  			Pot of Duality & Solemn Warning
+                		</p>
+              		</a>
+            	</li>
+          </ul>
+      </div>
 	</div>
+</div>
+</div>
 	<div data-role="footer" data-position="fixed">
 		<div data-role="navbar">
 			<ul>
@@ -312,22 +559,78 @@ Locations and Explanations of Design Patterns Implemented here:
 
 <div data-role="page" id="manualGames" data-add-back-btn="true">
 	<div data-role="header" data-position="fixed">
-		<h1>Manual Games</h1>
-	</div>
-	<div class="ctabox">
-       		<a data-ajax="false">
-          		<img class="indexIcon" src="images/ManualGames.png" alt="logo"/>
+		<h1>
+        	Bronze
+      	</h1>
+    </div>
+    	
+    	<div data-role="fieldcontain" class="ctabox">
+        	
+        	<a data-ajax="false">
+          		<img class="indexIcon" src="images/Gamesgalore.png" alt="logo"/>
         	</a>
-        		<h3>
-          			Manual Games
-        		</h3>
-      	</div>
-	<div data-role="content">
+        </div>
+        	<div>
+        		<div id="ManualGames" class="indexBackground">
+        		<h3>Manual Games</h3>
+        	<a data-ajax="false">
+          		<img  src="images/ManualGames.png" alt="On-LineGames"/>
+        	</a>
+        	
+        	</div>
+    </div>
+	<div data-role="content" class="indexBackground">
 	<div>
 		<a href="#home" data-ajax="false" data-role="button" class="backToHomeButton" data-mini="true" data-theme="e">Take Me Home</a>
 	</div>
-	    <p style="color:black">Manual games</p>
-	</div>
+	    <div data-role="fieldcontain">
+			<ul data-role="listview" data-filter="true" data-theme="b">
+            	<li>
+              		<a href="#errorPage" data-ajax="false">
+                		<img src="images/ManualGames.png" alt="fun" class="indexIcon"/>
+                		<h3>
+                  			Board
+                		</h3>
+                		<p>
+                  			Backgammon, Monopoly
+                		</p>
+              		</a>
+            	</li>
+            	<li>
+              		<a href="#errorPage" data-ajax="false">
+                		<img src="images/ManualGames.png" alt="education" class="indexIcon" />
+                		<h3>
+                  			Outside
+                		</h3>
+                		<p>
+                  			Volleyball, Horseshoes
+                		</p>
+              		</a>
+            	</li>
+            	<li>
+              		<a href="#errorPage" data-ajax="false">
+                		<img src="images/ManualGames.png" alt="work" class="indexIcon" />
+                		<h3>
+                  			Chess
+                		</h3>
+                		<p>
+                  			3-d, hints
+                		</p>
+              		</a>
+            	</li>
+            	<li>
+              		<a href="#errorPage" data-ajax="false">
+                		<img src="images/ManualGames.png" alt="work" class="indexIcon" />
+                		<h3>
+                  			Minute-to-win it
+                		</h3>
+                		<p>
+                  			At Home Challenges
+                		</p>
+              		</a>
+            	</li>
+          </ul>
+      </div>
 	<div data-role="footer" data-position="fixed">
 		<div data-role="navbar">
 			<ul>
@@ -338,15 +641,23 @@ Locations and Explanations of Design Patterns Implemented here:
 		</div>
 	</div>
 </div>
-
+</div>
+</div>
 
 <!--7) About Gameworld Page-->
 
 <div data-role="page" id="about" data-add-back-btn="true">
 	<div data-role="header" data-position="fixed">
 		<h1>
-        	About Gameworld
+        	Bronze
       	</h1>
+    </div>
+    	
+    	<div data-role="fieldcontain" class="ctabox">
+        	
+        	<a data-ajax="false">
+          		<img class="indexIcon" src="images/Gamesgalore.png" alt="logo"/>
+        	</a>
       </div>
 	<div data-role="content">
 		<div>
@@ -356,24 +667,31 @@ Locations and Explanations of Design Patterns Implemented here:
 		<h4>All about Gameworld</h4>
 		<h4>Thank you for trying Gameworld.
 		When you sign up, the world of games is at your finger tips</h4>
-			<div>
-				<h4>If you like games, you're in the right place!</h4>
-					
-						Personalize your account to support on-line games, card games,
-						and much more. Link all your favorite game places here!
-					
+			<div style="text-align:center">
+						<h4>
+							Establish easy links to your favorite game places.
+						</h4>
+						<h4>
+							Set-up News stream to bring in all your favorite social site news
+						</h4>
+						<h4>
+							Download rules, store tutorial videos for individual games.
+						</h4>
+						<h4>
+							Establish game libraries and add features to customize.
+						</h4>
 			</div>
 			
 			<div>
 				<h4>Github Links</h4>
-					<a data-ajax="false" data-role="button" id="gitLinksLive" data-theme="b" href="http://Phantomwriter.github.com/gameworld/BRONZE/index.html">View App Live</a>
+					<a data-ajax="false" data-role="button" id="gitLinksLive" data-theme="b" href="http://Phantomwriter.github.com/gameworld/GOLD/index.html">View App Live</a>
 					<a data-ajax="false" data-role="button" id="gitLinksMaster" data-theme="b" href="https://github.com/Phantomwriter/gameworld">View Gameworld Code</a>
 					<a data-ajax="false" data-role="button" id="GoldApp" data-theme="b" href="http://phantomwriter.github.com/gameworld/GOLD/index.html">Gold</a>
 			</div>
 			<div>
 				<h4>Special Thanks and credits</h4>
 				
-					I want to give credit where credit is due. 
+					<h4>Credit to the following.</h4> 
 			</div><br>	
 			<div class="p3">
 				Sony Entertainment (Playstation)<br>
@@ -387,7 +705,7 @@ Locations and Explanations of Design Patterns Implemented here:
 				Pokemon and Nintendo (Nintendo)
 			</div>
 	</div>
-	<div data-role="footer">
+	<div data-role="footer" data-position="fixed">
 		<div data-role="navbar">
 			<ul>
 				<li><a data-ajax="false" href="#about">About</a></li>
@@ -398,8 +716,6 @@ Locations and Explanations of Design Patterns Implemented here:
 	</div>
 </div>
 </div>
-
-
 <!--8) My Page-->
 <div data-role="page" id="myPage" data-add-back-btn="true">
 		<div data-role="header" data-position="fixed">

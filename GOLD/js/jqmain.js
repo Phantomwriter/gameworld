@@ -9,7 +9,10 @@
 
 ////////////////////////////////////////////////////////////////////////
 
-
+function go(x) {
+		var theElement = document.getElementById(x);
+		return theElement;
+		}
 
 $('#home').on('pageinit', function(){
 		console.log("Home page loaded!");
@@ -34,13 +37,35 @@ $('#signUpPage').on('pageinit', function(){
 			},
 			submitHandler: function(){
 	var data = signUpForm.serializeArray();
-			$.jStorage.set(data);
-			alert("Data Saved");
+			saveData(data);
 		} 
+	}	
+	);
+	var saveData= function(data){
+			var id=Math.floor(Math.random()*100000001);
+		console.log(data);
+		var item            ={};
+			item.fname		=['First Name:', $('#fname').value];
+			item.lname		=['Last Name:', $('#lname').value];
+			item.pword		=['Password:', $('#pword').value];
+			item.cpword		=['Confirm Password:', $('#cpword').value];
+			item.email		=['Email:', $('#email').value];
+			item.friends    =['I have:', $('#quantity').value];
+			item.day		=['Day:', $('#day').value];
+			item.month		=['Month:', $('#month').value];		
+			item.year		=['year:', $('#year').value];		
+
+
+				localStorage.setItem(id, JSON.stringify(item));
+					alert("Information is saved!");	
+
+
+} 	
 	});
 	
-
-
+	var saveData =$('submit');
+		saveData.on("click");
+	
 
 var autofillData = function (){
 	 
@@ -59,7 +84,7 @@ var	deleteItem = function (){
 var clearLocal = function(){
 
 };
-});	
+
 
 
 
